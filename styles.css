@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    /* ## Colors
+    ### Primary */
+    --SoftBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /* ### Neutral */
+    --VeryDarkBlueMain: hsl(217, 54%, 11%);
+    --VeryDarkBlueCard: hsl(216, 50%, 16%);
+    --VeryDarkBlueLine: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--VeryDarkBlueMain);
+    font-size: 18px;
+}
+
+.main-container{
+    /* border: 1px solid transparent; */
+    background-color: var(--VeryDarkBlueCard);
+    width: 330px;
+    height: 545px;
+    margin: 65px auto;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.image{
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    /* overflow: hidden; */
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+.view{
+    background-color: rgba(0, 255, 247, .4);   
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: auto; */ 
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.view:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.txt-container h1{
+    font-weight: 900;
+    font-size: 1.2em;
+    color: var(--White);
+    margin: 25px auto 20px;
+}
+
+.txt-container h1:hover, 
+.avatar-container span:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.txt-container p{
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--SoftBlue);
+}
+
+.details-container{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 278px;
+    margin: 20px auto; 
+    /* font-size: 0.9em;    */
+}
+
+.eth, .time{
+    display: flex;
+    font-size: 0.8em;
+}
+
+.eth img, .time img{
+    margin-right: 8px;
+}
+
+.time p{
+    color: var(--SoftBlue);
+}
+
+.eth p{
+    color: var(--Cyan);
+}
+
+.line{
+    border-bottom: 1px solid var(--VeryDarkBlueLine);
+    /* width: 278px; */
+}
+
+.avatar-container{
+    display: flex;
+    align-items: center;
+    margin: 15px auto; 
+}
+
+.icon-avatar{
+    background-image: url(images/image-avatar.png);
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    /* -------- FALTO COLOCAR  */
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.avatar-container p{
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--SoftBlue);
+}
+
+.avatar-container span{
+    color: var(--White);
+}
+
+.attribution { 
+    font-size: 15px; 
+    text-align: center; 
+    color: var(--White);
+    margin: 0 auto 15px;
+}
+    
+.attribution a { color: var(--Cyan); }
+
+
+@media(min-width:900px){
+    .main-container{
+        width: 355px;
+        height: 600px;
+
+    }
+    .image{
+        width: 300px;
+        height: 300px;
+    }
+    .txt-container p{
+        font-size: 1em;
+    }
+}
